@@ -1,3 +1,4 @@
+// my solution 
 var longestCommonPrefix = function(strs) {
     let prefix = ""
     let index = 0
