@@ -61,38 +61,27 @@ var mergeTwoLists = function (list1, list2) {
 //     return mergedHead.next;
 // };
 
-var mergeTwoLists = function (list1, list2) {
-
-    
-    if (list1 === null && list2) {
-        return list2
-    }
-    if (list2 === null && list1) {
-        return list1
-    }
-    if (list2 === null && list1 === null) {
-        return list1
-    }
-
-   
-    let head = runner
-    while (runner2 && runner.next) {
-
-        if (runner.val <= runner2.val && (runner.next.val > runner2.val || runner.next == null)) {
-            let temp = runner.next
-            runner.next = new ListNode(runner2.val)
-            runner.next.next = temp
-            runner = runner.next
-            runner2 = runner2.next
-        } else {
-            runner = runner.next
-        }
-    }
-    if (runner2) {
-        runner.next = runner2
-    }
-
-
-
-    return head
-};
+// public class Solution {
+//     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+//         ListNode head = new ListNode(0);
+//         ListNode handler = head;
+//         while(l1 != null && l2 != null) {
+//             if (l1.val <= l2.val) {
+//                 handler.next = l1;
+//                 l1 = l1.next;
+//             } else {
+//                 handler.next = l2;
+//                 l2 = l2.next;
+//             }
+//             handler = handler.next;
+//         }
+        
+//         if (l1 != null) {
+//             handler.next = l1;
+//         } else if (l2 != null) {
+//             handler.next = l2;
+//         }
+        
+//         return head.next;
+//     }
+// }
